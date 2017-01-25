@@ -1,0 +1,19 @@
+<div class="container">
+	<h1>Completed Task List!!!</h1>
+	
+	<input type="search" ng-model="query" placeholder="Search For completed Task" class="form-control">
+	<br>
+	<table class="table table-responsive">
+	 	<tr>
+	 		<th>Title</th><th>Description</th><th>Added</th><th>Remove</th>
+	 	</tr>
+	 	<tr ng-repeat="blog in ctasks | filter: query track by $index">
+	 		<td><strike>{{ blog.title }}</strike></td><td><strike>{{ blog.description }}</strike></td><td><strike>{{ blog.added_date }}</strike></td><td><button class="btn btn-danger"  ng-click="removeData(blog.id)">X</button></td>
+	 	
+		
+		
+		</tr>
+	</table>
+ <script src="./js/app.js"></script>
+    <script src="./js/controller.js"></script>
+</div>
